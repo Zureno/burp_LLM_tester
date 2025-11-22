@@ -13,17 +13,17 @@ It works with any HTTP-based LLM gateway, for example:
 - OpenAI-style APIs (`/v1/chat/completions`)
 - Proxies in front of commercial models
 
-> ⚠️ This extension does **not** exploit anything on its own – it only helps generate and organize test prompts. You are responsible for using it ethically and within the scope you’re allowed to test.
+> This extension does **not** exploit anything on its own – it only helps generate and organize test prompts. You are responsible for using it ethically and within the scope you’re allowed to test.
 
 ---
 
 ## Features
 
-- 🔍 **Automatic LLM request detection**
+-   **Automatic LLM request detection**
   - Recognizes JSON bodies with `model` + `messages[]` in Repeater.
   - Shows a summary of the request in the **LLM Tester** tab.
 
-- 🧪 **Prompt-injection fuzzing**
+-   **Prompt-injection fuzzing**
   - Attack families (each with multiple variants):
     - Instruction override
     - System prompt leak
@@ -32,17 +32,17 @@ It works with any HTTP-based LLM gateway, for example:
     - Policy / safety bypass
   - Easily extendable with your own payloads.
 
-- 🧬 **Mutation-based fuzzing**
+-   **Mutation-based fuzzing**
   - Keeps the original system/user messages.
   - Appends extra “attacker” messages or merges into the last user message.
   - Generates multiple variants per family (configurable).
 
-- 🧱 **Burp-native workflow**
+-   **Burp-native workflow**
   - All fuzzed prompts are cloned as new **Repeater** tabs.
   - Works with your existing Burp projects and traffic.
   - No extra UI beyond one editor tab + one button.
 
-- 🧩 **Compatible with local & remote LLMs**
+-   **Compatible with local & remote LLMs**
   - Tested with **Ollama** (`gpt-oss:20b`).
   - Should work with any OpenAI-compatible or custom JSON API.
 
@@ -275,6 +275,7 @@ Open a pull request with:
 
     The above copyright notice and this permission notice shall be included in all
     copies or substantial portions of the Software.
+
 
 
 
