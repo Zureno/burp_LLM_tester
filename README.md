@@ -144,4 +144,13 @@ High-level flow:
    ```
    Send this from Repeater. You should see a normal JSON response from the model.
 
+6. Inspect with LLM Tester
+   On the same Repeater tab, click the LLM Tester tab.
+   You should see:
+   A notice like: LLM request detected.
+   The model name.
+   A summarized view of the messages array.
+   This confirms the extension can parse your LLM request.
+
+
 
