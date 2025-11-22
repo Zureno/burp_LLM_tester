@@ -95,3 +95,8 @@ High-level flow:
    ```bash
    git clone https://github.com/<your-username>/<your-repo>.git
    cd <your-repo>
+
+2. **Configure Jython in Burp**
+
+   ```In Burp, go to Extender → Options → Python Environment.
+   Click Select file… and choose your jython-standalone-2.7.x.jar.
