@@ -107,5 +107,41 @@ High-level flow:
    Type: Python
    Extension file: select LLMPromptFuzzerTab.py (or whatever filename you’re using).
    Click Next / OK.
+   
+4. **Verify it loaded**
+
+   In Extender → Extensions, you should see:
+   Type: Python
+   Name: LLM Prompt Injection Fuzzer
+   “Extension loaded” checked
+   In the Output tab you should see a message like:
+   "[+] LLM Prompt Fuzzer loaded. Editor tab + fuzz families registered"
+
+5. **Usage**
+   
+   Create a base LLM request in Repeater
+   Example request for Ollama:
+   ```
+   POST /api/chat HTTP/1.1
+   Host: 127.0.0.1:11434
+   Content-Type: application/json
+   Connection: close
+   Content-Length: <auto>
+   {
+   "model": "gpt-oss:20b",
+   "messages": [
+    {
+      "role": "system",
+      "content": "You are a safe assistant. Only answer questions about JWTs and security."
+    },
+    {
+      "role": "user",
+      "content": "Explain what a JSON Web Token (JWT) is in simple terms."
+    }
+    ],
+    "stream": false
+   } 
+   ```
+   Send this from Repeater. You should see a normal JSON response from the model.
 
 
