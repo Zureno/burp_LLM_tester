@@ -98,6 +98,13 @@ High-level flow:
 
 2. **Configure Jython in Burp**
 
-   ```In Burp, go to Extender → Options → Python Environment. Click Select file… and choose your
-   jython-standalone-2.7.x.jar.
+   In Burp, go to Extender → Options → Python Environment. Click Select file… and choose your jython-standalone-2.7.x.jar.
+
+3. ****Load the extension**
+
+   Go to Extender → Extensions.
+   Click Add.
+   Type: Python
+   Extension file: select LLMPromptFuzzerTab.py (or whatever filename you’re using).
+   Click Next / OK.
 
