@@ -243,16 +243,16 @@ High-level flow:
 
 Future improvements that might land in this repo:
 
-🔁 Intruder integration
+Intruder integration
 Send a single request to Intruder with __PI_PAYLOAD__ placeholders and let Intruder handle the volume.
 
-🧷 Context-menu integration
+Context-menu integration
 “Send to Prompt Fuzzer” from Proxy/HTTP history.
 
-🎛 GUI configuration
+GUI configuration
 Edit attack families and caps from within Burp’s UI.
 
-📊 Reporting helpers
+Reporting helpers
 Export successful bypasses and payloads as a JSON/CSV report.
 
 Contributions, issues, and ideas are very welcome.
@@ -288,6 +288,7 @@ Open a pull request with:
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
+
 
 
 
