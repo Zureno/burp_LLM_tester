@@ -144,7 +144,8 @@ High-level flow:
    ```
    Send this from Repeater. You should see a normal JSON response from the model.
 
-6. Inspect with LLM Tester
+6. **Inspect with LLM Tester**
+
    On the same Repeater tab, click the LLM Tester tab.
    You should see:
    A notice like: LLM request detected.
@@ -152,7 +153,8 @@ High-level flow:
    A summarized view of the messages array.
    This confirms the extension can parse your LLM request.
 
-7. Fuzz with LLM Fuzzer
+8. **Fuzz with LLM Fuzzer**
+   
    Click the LLM Fuzzer tab on that request.
    You should see something like:
 
@@ -169,7 +171,7 @@ High-level flow:
   Tick the families you want to include (e.g. all of them).
   Click Generate fuzzed variants to Repeater.
   
-8. Send fuzzed prompts to the LLM
+9. **Send fuzzed prompts to the LLM**
 
    For each new fuzz tab:
    Click Send.
@@ -181,7 +183,7 @@ High-level flow:
    Can it be tricked into revealing “secrets” you put into the system prompt?
    Record any successful bypasses as findings in your security report.
 
-10. Configuration
+10. **Configuration**
 
    At the top of the Python script you’ll find configuration sections like:
    PROMPT_FAMILIES – dictionary of families → list of payload templates.
@@ -219,7 +221,7 @@ High-level flow:
   ```
   Once the extension recognizes this as an LLM request, the same LLM Tester and LLM Fuzzer flow applies.
 
-11. Limitations & Notes
+11. **Limitations & Notes**
 
   The extension does not:
 
@@ -235,8 +237,57 @@ High-level flow:
 
     Mis-detect JSON that happens to look like a chat payload.
 
-    Always validate results manually and combine them with threat modeling, code review, and standard AppSec testing.
+  Always validate results manually and combine them with threat modeling, code review, and standard AppSec testing.
 
+12. **Roadmap / Ideas**
+
+Future improvements that might land in this repo:
+
+🔁 Intruder integration
+Send a single request to Intruder with __PI_PAYLOAD__ placeholders and let Intruder handle the volume.
+
+🧷 Context-menu integration
+“Send to Prompt Fuzzer” from Proxy/HTTP history.
+
+🎛 GUI configuration
+Edit attack families and caps from within Burp’s UI.
+
+📊 Reporting helpers
+Export successful bypasses and payloads as a JSON/CSV report.
+
+Contributions, issues, and ideas are very welcome.
+
+13. **Contributing**
+
+    Fork the repo.
+    Create a feature branch.
+    Make your changes (and keep them Jython-compatible).
+Open a pull request with: 
+    A short description of the change.
+    Before/after screenshots if it’s a UI change.
+
+14. **License**
+
+    MIT License
+    Copyright (c) 2025 
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
 
 
 
