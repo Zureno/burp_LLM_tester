@@ -98,7 +98,7 @@ This is meant to speed up **manual LLM security testing** rather than be a fully
        Over-permissive tool / function calls
        Other risky behavior
 
-6. How detection works
+  ## How detection works
 
    ** The LLM Fuzzer tab is only enabled for requests where:
    - ** Content is non-empty, and
@@ -111,7 +111,7 @@ This is meant to speed up **manual LLM security testing** rather than be a fully
      - ** Not show at all, or
      - ** Show but say “No LLM JSON detected.”
 
-7. Troubleshooting
+## Troubleshooting
 
    ** LLM Fuzzer tab doesn’t appear
    - ** Make sure you’re viewing the request, not the response.
@@ -128,12 +128,12 @@ This is meant to speed up **manual LLM security testing** rather than be a fully
   ** Some models / APIs not recognized
     - ** Check what the body looks like.
       If it uses different field names, you can adapt the detection logic in _looks_like_llm_request().
-
-8. Notes & Limitations
+## Notes & Limitations
 
    ** This is a manual-fuzzing helper, not a full vulnerability scanner.
    ** Variants are syntactic prompt changes – you still need to interpret model behavior.
    ** Designed for JSON-based LLM APIs (OpenAI-style, Ollama, many SaaS providers). For non-JSON formats you’d need to extend the detection & mutation logic.
 
-9. License
+## License
    You can treat this as MIT-style open source unless you prefer to apply a different license in your repository.
+
