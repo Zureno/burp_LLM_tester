@@ -135,5 +135,6 @@ This is meant to speed up **manual LLM security testing** rather than be a fully
    ** Designed for JSON-based LLM APIs (OpenAI-style, Ollama, many SaaS providers). For non-JSON formats you’d need to extend the detection & mutation logic.
 
 ## License
-   You can treat this as MIT-style open source unless you prefer to apply a different license in your repository.
+   Not really :) 
+
 
